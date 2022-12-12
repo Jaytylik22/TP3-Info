@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package hierarchieVehicules;
+
+/**
+ * @author Jayty
+ *
+ */
+public class CS300 extends AbstractAvion {
+	
+	public int nbPassager = 130;
+
+	public CS300(int type) {
+		super(type);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String toString() {
+		return "CS300";
+		
+	}
+
+}
