@@ -4,7 +4,7 @@
 package hierarchieVehicules;
 
 /**
- * @author Jayty
+ * @author Jerome
  *
  */
 public class GreyHoundG4500 extends AbstractAutobus {

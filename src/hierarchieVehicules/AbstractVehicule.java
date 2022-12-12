@@ -4,7 +4,7 @@
 package hierarchieVehicules;
 
 /**
- * @author Jerome
+ * @authorJerome
  *
  */
 public abstract class AbstractVehicule implements InterfaceVehicules{

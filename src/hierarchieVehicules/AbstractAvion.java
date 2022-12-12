@@ -4,7 +4,7 @@
 package hierarchieVehicules;
 
 /**
- * @author Jayty
+ * @author Jerome
  *
  */
 public abstract class AbstractAvion extends AbstractVehicule  {
