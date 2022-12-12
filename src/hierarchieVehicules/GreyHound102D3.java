@@ -21,4 +21,10 @@ public class GreyHound102D3 extends AbstractAutobus {
 		
 	}
 
+	@Override
+	public int getNbPassagersMax() {
+		// TODO Auto-generated method stub
+		return nbPassager;
+	}
+
 }

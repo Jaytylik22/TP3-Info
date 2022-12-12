@@ -21,4 +21,10 @@ public class CS100 extends AbstractAvion{
 		
 	}
 
+	@Override
+	public int getNbPassagersMax() {
+		// TODO Auto-generated method stub
+		return nbPassager;
+	}
+
 }

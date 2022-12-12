@@ -21,4 +21,10 @@ public class TgvDuplex extends AbstractTrain{
 		
 	}
 
+	@Override
+	public int getNbPassagersMax() {
+		// TODO Auto-generated method stub
+		return nbPassager;
+	}
+
 }
