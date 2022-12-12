@@ -1,5 +1,7 @@
 package nouveauDossier;
 
+import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -7,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -19,8 +22,9 @@ public class VueGraphique extends JFrame implements Runnable,ActionListener {
 	private JFrame self;
 	private Dimension tailleEcran;
 	private Configuration config;
-	
-	
+	JPanel panel_left=new JPanel();
+	JPanel panel_right=new JPanel();
+	JButton btnsouss = new JButton("ajouter");
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SwingUtilities.invokeLater(new VueGraphique());
@@ -32,6 +36,8 @@ public class VueGraphique extends JFrame implements Runnable,ActionListener {
 		// TODO Auto-generated method stub
 		initComposants();
 		tailleEcran=(Toolkit.getDefaultToolkit().getScreenSize());
+		double hauteur = tailleEcran.getHeight();
+		double laurgeur =tailleEcran.getWidth();
 		
 	}
 	
@@ -43,17 +49,26 @@ public class VueGraphique extends JFrame implements Runnable,ActionListener {
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		addWindowListener(new FenetreEcouteur());
 		
+		PanneauPrincipal();
 		
 		
 		
-		setVisible(true);
+		self.setVisible(true);
 	}
 	
 	
 	private void PanneauPrincipal() {
 		
-		double hauteur = tailleEcran.getHeight();
-		double laurgeur =tailleEcran.getWidth();
+		
+		
+		//placemnet des panneaus
+		self.add(panel_left, BorderLayout.LINE_START);
+		
+		self.add(panel_right, BorderLayout.LINE_END);
+		
+		panel_left.add(btnsouss,Component.BOTTOM_ALIGNMENT);
+		
+		panel_left.setVisible(true);
 		
 	}
 	
