@@ -62,4 +62,34 @@ public class PanneauVehicule extends JPanel {
 		}
 		
 	}
+
+
+	public JComboBox getB1() {
+		return b1;
+	}
+
+
+	public void setB1(JComboBox b1) {
+		this.b1 = b1;
+	}
+
+
+	public JLabel getL1() {
+		return l1;
+	}
+
+
+	public void setL1(JLabel l1) {
+		this.l1 = l1;
+	}
+
+
+	public JLabel getL2() {
+		return l2;
+	}
+
+
+	public void setL2(JLabel l2) {
+		this.l2 = l2;
+	}
 }

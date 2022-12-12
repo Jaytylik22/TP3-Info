@@ -1,4 +1,4 @@
-package nouveauDossier;
+package vueGraphique;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -11,20 +11,26 @@ import java.awt.event.WindowListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+
+import enginCartes.Configuration;
 
 
 public class Cadre extends JFrame implements Runnable,ActionListener {
 	
 	
+	//Création de l'option menu
+	JMenu menu = new JMenu("menu");
+	//Création des items du menu
+	JOptionPane optionPane = new JOptionPane("test");
+	
 	private JFrame self;
 	private Dimension tailleEcran;
 	private Configuration config;
-	JPanel panel_left=new JPanel();
-	JPanel panel_right=new JPanel();
-	JButton btnsouss = new JButton("ajouter");
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SwingUtilities.invokeLater(new Cadre());
@@ -60,22 +66,22 @@ public class Cadre extends JFrame implements Runnable,ActionListener {
 	private void PanneauPrincipal() {
 		
 		
+		PanneauProgression panneau_haut= new PanneauProgression();
+        //public PanneauDessin panneau_centre= new PanneauDessin();
+        PanneauPrincipal panneau_gauche= new PanneauPrincipal();
+        PanneauPrincipal panneau_droite= new PanneauPrincipal();
 		
-		//placemnet des panneaus
-		self.add(panel_left, BorderLayout.LINE_START);
+		//placement des panneaus
+		/*self.add(panel_left, BorderLayout.LINE_START);
 		
 		self.add(panel_right, BorderLayout.LINE_END);
 		
 		panel_left.add(btnsouss,Component.BOTTOM_ALIGNMENT);
 		
-		panel_left.setVisible(true);
+		panel_left.setVisible(true);*/
 		
 	}
-	
-	private void PanneauVehicule() {
-		
-	}
-	
+
 	
 	private class FenetreEcouteur implements WindowListener{
 		JPanel panneauContenu = (JPanel) getContentPane();
@@ -84,52 +90,53 @@ public class Cadre extends JFrame implements Runnable,ActionListener {
 			// TODO Auto-generated method stub
 			
 		}
+		
 
-		@Override
-		public void windowClosing(WindowEvent e) {
-			// TODO Auto-generated method stub
-			//confirmation de l'utilisateur pour quitter le programe 
-			 int reponse = JOptionPane.showConfirmDialog(null, "Voulez-vous vraiment quiter","Selectioner une option",JOptionPane.YES_NO_CANCEL_OPTION);
-			    if(reponse == JOptionPane.YES_OPTION)
-			    {
-			        dispose();
-			    }
-			 else {
-			     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-			 }
-		}
-
-		@Override
-		public void windowClosed(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowIconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeiconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowActivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeactivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+			@Override
+			public void windowClosing(WindowEvent e) {
+				// TODO Auto-generated method stub
+				//confirmation de l'utilisateur pour quitter le programe 
+				 int reponse = JOptionPane.showConfirmDialog(null, "Voulez-vous vraiment quiter","Selectioner une option",JOptionPane.YES_NO_CANCEL_OPTION);
+				    if(reponse == JOptionPane.YES_OPTION)
+				    {
+				        dispose();
+				    }
+				 else {
+				     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+				 }
+			}
 	
-}
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+	
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+	
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+	
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+	
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		
+	}
 
 
 	@Override

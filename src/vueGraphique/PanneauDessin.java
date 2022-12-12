@@ -102,7 +102,7 @@ public class PanneauDessin extends JPanel {
 			
 		Dimension taille = getPreferredSize();
 		
-		TestPanneauDessin.go(enginCartes, config);
+		//TestPanneauDessin.go(enginCartes, config);
 		carte = enginCartes.getMeilleurSolution();
 		
 		dessinerVilles(g2);
