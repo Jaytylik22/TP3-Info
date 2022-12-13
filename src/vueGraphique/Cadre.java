@@ -41,6 +41,7 @@ public class Cadre extends JFrame implements Runnable,ActionListener {
 	public void run() {
 		// TODO Auto-generated method stub
 		initComposants();
+		//optenir les dimention de l'écran 
 		tailleEcran=(Toolkit.getDefaultToolkit().getScreenSize());
 		double hauteur = tailleEcran.getHeight();
 		double laurgeur =tailleEcran.getWidth();
@@ -66,12 +67,12 @@ public class Cadre extends JFrame implements Runnable,ActionListener {
 	private void PanneauPrincipal() {
 		
 		
-		PanneauProgression panneau_haut= new PanneauProgression();
-        //public PanneauDessin panneau_centre= new PanneauDessin();
+	PanneauProgression panneau_haut= new PanneauProgression();
+        PanneauDessin panneau_centre= new PanneauDessin();
         PanneauPrincipal panneau_gauche= new PanneauPrincipal();
         PanneauPrincipal panneau_droite= new PanneauPrincipal();
 		
-		//placement des panneaus
+		//placement des panneaus ne fonctionne pas 
 		/*self.add(panel_left, BorderLayout.LINE_START);
 		
 		self.add(panel_right, BorderLayout.LINE_END);
