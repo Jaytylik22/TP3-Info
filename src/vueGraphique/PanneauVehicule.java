@@ -25,7 +25,8 @@ public class PanneauVehicule extends JPanel {
 		
 		//Array contenant les véchicules
 		final String [] tabNomTypeVehicule =
-	         {"CS100", "CS300", "GreyHound102D3","GreyHoundG4500", "Tgv Atlantique", "tgv Duplex"};
+	         {"CS100", "CS300", "GreyHound102D3","GreyHoundG4500", 
+	        		 "Tgv Atlantique", "tgv Duplex"};
 
 		
 		//Création de la combobox et des labels

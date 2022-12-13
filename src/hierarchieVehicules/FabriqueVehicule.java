@@ -20,7 +20,10 @@ public class FabriqueVehicule {
 	
 	// Les noms de type de vehicules.
 	public static final String [] tabNomTypeVehicule =
-								         {"CS100", "CS300", "GreyHound102D3","GreyHoundG4500", "Tgv Atlantique", "tgv Duplex"};
+								         {"CS100", "CS300", "GreyHound102D3",
+								        		 "GreyHoundG4500", 
+								        		 "Tgv Atlantique",
+								        		 "tgv Duplex"};
 	
 	public static int getNbTypesVehicule() {
 		return tabNomTypeVehicule.length;

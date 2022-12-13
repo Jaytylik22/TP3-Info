@@ -90,7 +90,8 @@ public class PanneauGestion extends JPanel{
 		}
 		
 		// CréerArbre du tp2 démarrer dans un processus à part pour 
-		// permettre la mise à jour de la barre de progression durant les calculs.
+		// permettre la mise à jour de la barre de progression durant les 
+		//calculs.
 		t = new Thread(new CreeArbre());
 		t.start();				  	
 
@@ -222,7 +223,8 @@ public class PanneauGestion extends JPanel{
 	 * La stratégie utilisée a été de redimensionner le panneau de dessin en se 
 	 * servant du facteur d'écelle des données initiales.  Comme le panneau est
 	 *  dans un scrollPane, le tout s'adapte automatiquement.  J'aurais pu aussi 
-	 *  utiliser affineTransform mais ça ne me tentait pas de l'expliquer pour le gain 
+	 *  utiliser affineTransform mais ça ne me tentait pas de l'expliquer pou
+	 *  r le gain 
 	 *  pédagogique que cela aurait pu avoir.
 	 */
 	private void mettreAEchelle() {

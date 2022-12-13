@@ -21,7 +21,8 @@ public class TestInterfaceVehiculeEtFabrique {
 		// Évite pls appels à l'accesseur.
 		int nbVehicule = FabriqueVehicule.getNbTypesVehicule();
 		
-		// On présume que ce nombre comprend tous les types de véhicules possibles.
+		// On présume que ce nombre comprend tous les types de véhicules 
+		//possibles.
 		for(int i = 0; i < nbVehicule; i++) {
 			
 			vehicule = FabriqueVehicule.obtenirVehicule(i);
@@ -41,7 +42,8 @@ public class TestInterfaceVehiculeEtFabrique {
 				
 				vehicule + " " + 
 		        InterfaceVehicules
-		        		.tabNomTypeCarburant[vehicule.getTypeCarburant()] + " " +
+		        		.tabNomTypeCarburant[vehicule.getTypeCarburant()] +
+		        		" " +
 		        
 				vehicule.getNbPassagersMax());
 	}

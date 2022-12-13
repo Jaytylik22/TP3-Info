@@ -173,7 +173,8 @@ public class PanneauDessin extends JPanel {
 
 			int echelle = config.getEchelle();	
 
-			// Les villes ont une taille différente selon le nombre de fois qu'elles sont 
+			// Les villes ont une taille différente selon le nombre de fois 
+			//qu'elles sont 
 			// connectés. 			
 			int tailleVilleCourante = carte.getNbDeCetteVille(villeCourante) ;
 			int tailleDestination = carte.getNbDeCetteVille(destination) ; 
@@ -218,8 +219,10 @@ public class PanneauDessin extends JPanel {
 	private void dessinerUneVille(Ville v, Graphics2D g2, int taille) {
 		
 		/*
-		 * Stratégie : La taille des villes à l'écran est calculée selon le nombre de villes 
-		 * qui sont reliées.  Pour des raisons d'effet visuel, nous limitons la taille 
+		 * Stratégie : La taille des villes à l'écran est calculée selon le
+		 * nombre de villes 
+		 * qui sont reliées.  Pour des raisons d'effet visuel, nous limitons 
+		 * la taille 
 		 * au double du rayon en x (on présume un cercle).
 		 * 
 		 * On utilise les données initiales pour tenir compte de l'échelle.
@@ -240,7 +243,8 @@ public class PanneauDessin extends JPanel {
 
 		// Le numéro de la ville index).
 		g2.drawString(String.valueOf(v.getIndex() + 1), 
-				echelleX - (RAYON_X * taille)/2, echelleY - (RAYON_Y * taille)/2);
+				echelleX - (RAYON_X * taille)/2, echelleY - (RAYON_Y *
+						taille)/2);
 		
 		g2.setColor(Color.RED);
 		
